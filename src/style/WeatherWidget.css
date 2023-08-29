@@ -1,0 +1,131 @@
+.weather-widget {
+    background-color : rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position : absolute;
+    bottom : 2vh;
+    right : 1vw;
+  }
+  
+.weather-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-content-icon-temp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.icon-weather-widget {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-right :10px;
+}
+  
+.temperature-weather-widget {
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+  
+.location-weather-widget {
+    font-size: 18px;
+    color: #eeffee;
+}
+
+.popup-weather-big-container{
+    position : absolute;
+    background-color : rgba(33, 117, 173, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    color : #eeffee;
+    top : -35vh;
+    padding : 1vh 1vw 1vh 1vw;
+    box-sizing: border-box;
+    width : 70vw;
+    left : 15vw;
+    z-index : 100;
+    height: 70vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.header-popup-weather{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+}
+
+.weather-chart{
+    position : absolute;
+    right : 1vw;
+    width : 43vw;
+    height: 58vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.content-widget-popup-weather{
+    width : 25vw;
+    height: 58vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ligne-2-popup-weather, .ligne-3-popup-weather{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ligne-1-popup-weather{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.ligne-2-popup-weather, .ligne-3-popup-weather, .ligne-1-popup-weather{
+    height: 31%;
+    margin-top : 1%;
+    margin-bottom :1%;
+}
+
+.widget-classique{
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding : 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width :7vw;
+    height: 14vh;
+    color : #ffffff;
+}
+.popup-widget-temperature-base{
+    width :21vw;
+    height: 14vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.popup-widget-temperature-base div{
+    width :33%;
+    text-align: center;
+    color : white;
+}
+.icon-weather-widget-popup{
+    font-size: 1.7em;
+    color : white;
+}

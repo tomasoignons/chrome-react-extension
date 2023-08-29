@@ -1,38 +1,343 @@
-.App {
-  text-align: center;
+
+/*------------------------------------------créer les styles des différentes barres de défilement------------------------------------*/
+
+/* fonctionne sur Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #195881 rgba(255, 0, 0, 0);
+}
+  
+  /* fonctionne sur Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 6px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: rgba(255, 0, 0, 0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  
+*::-webkit-scrollbar-thumb {
+    background-color:#195881;
+    border-radius: 20px;
+    border: 3px solid #195881;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* police et tt ce qui vaut pour tout le monde */
+
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* Ouverture */
+
+.container-opening {
   display: flex;
+  height: 100vh;
+  width : 100vw;
   flex-direction: column;
+}
+
+.upper-half, .lower-half {
+  width: 100%;
+  height: 50vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 24px;
+  position: relative;
+  z-index : 0;
+  background-size :cover;
+
+}
+
+.upper-half {
+  color: white;  
+  background-position: center top;
+}
+
+.lower-half {
+  background-position: center -50vh;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* searchbar  */
+
+.search-container{
+  width : 50vw;
+  height: 100%;
+  display :flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* input[type="text" i] {
+  padding : 0px;
+} */
+
+.search-icon{
+  position : relative;
+  height: 100%;
+}
+.search-input{
+  height: 6vh;
+  border-radius: 100px;
+  font-size : 0.8em;
+  padding-left : 20px;
+  border : none;
+  outline : none;
+  box-sizing: border-box;
+}
+
+.search-input:focus{
+  border : none;
+}
+
+
+/* calendar-container et companie */
+.calendar-container{
+  background-color : rgba(33, 117, 173, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  position : absolute;
+  right : 1vw;
+  width : 20vw;
+  height: 47vh;
+  top : 0;
+  border-radius: 0 0 10px 10px;
+  padding-top : 1vh;
+  padding-bottom : 2vh;
+  box-sizing: border-box;
+}
+
+.calendar-container-header{
+  height: 4vh;
+  padding-top : 1vh;
+  padding-left: 1vw;
+  font-size: 0.7em;
+  box-sizing: border-box;
+}
+.calendar-container-scrollable{
+  padding-left : 1vw;
+  padding-right: 0.5vw;
+  height: 93%;
+  width : 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.calendar-event-list{
+  border-radius : 5px;
+  width : 100%;
+  height: 75px;
+  margin-top : 10px;
+  margin-bottom : 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color :#9eceee;
+}
+
+.event-list-event-titre{
+  font-size : 0.8em;
+}
+
+.event-list-event-description{
+  font-size: 0.7em;
+}
+
+
+
+
+
+
+/* ici c'est l'event en haut */
+.event-container-header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+  width :100%;
+  margin-bottom : 1vh;
+}
+
+.event-container-header-name{
+  font-size: 0.8em;
+  color : #0f3955;
+}
+
+.event-container-quit{
+  height: 100%;
+}
+
+.event-container-quit svg{
+  height: 100%;
+}
+
+
+.event-container{
+  background-color : rgba(33, 117, 173, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  position : absolute;
+  right : 1vw;
+  width : 20vw;
+  height: 47vh;
+  bottom : 0;
+  border-radius: 10px 10px 0 0;
+  padding-top : 1vh;
+  padding-bottom : 2vh;
+  padding-right : 1vw;
+  padding-left :1vw;
+  box-sizing: border-box;
+  color : white;
+}
+
+.event-container-events{
+  height: 39vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.evenement-actuel{
+  height: 65%;
+  width : 100%;
+  border-radius: 5px;
+  margin-bottom : 5px;
+  box-sizing: border-box;
+  padding : 7px;
+}
+
+.evenement-actuel div{
+  margin-bottom : 15px;
+}
+
+.depuis-evenement-actuel{
+  margin-top : 30px;
+  color : #DDDDDD;
+}
+
+.depuis-evenement-actuel-noevent{
+  margin-top : 30px;
+  color : #DDDDDD;
+  font-size: 0.8em;
+}
+
+.pourcentage-accomplissement-evenement{
+  color : #DDDDDD;
+}
+
+.Titre-evenement-actuel{
+  font-size :1.3em;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.prochain-evenement{
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width : 100%;
+  height: 40%;
+  border-radius: 5px;
+  margin-top : 5px;
+  box-sizing: border-box;
+  padding: 7px;
+  font-size : 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color : #9eceee;
+}
+
+.prochain-evenement div{
+  margin-bottom : 5px;
+}
+
+
+
+/* Navbar */
+
+.navbar-container{
+  position : absolute;
+  width : 100%;
+  height: 8vh;
+  background-color : rgba(33, 117, 173, 0.75);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  top : 0;
+  left : 0;
+  display : flex;
+  justify-content : space-between;
+  align-items: center;
+  padding :15px;
+  box-sizing: border-box;
+}
+
+.upper-half{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.clock-container{
+  margin-left : 7vw;
+  width : 400px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.time-container{
+  position : absolute;
+  bottom : 0px;
+  font-size: 6em;
+  font-weight: bold;
+}
+
+.greetings{
+  position : absolute;
+  top : 1vh;
+  margin-left : 7vw;
+  font-size : 3em;
+}
+
+
+.date-calendar-container{
+  position : absolute;
+  bottom : 2vh;
+  left : 1vw;
+  z-index : 0;
+  background-color : rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  padding : 10px;
+  border-radius: 10px;
+  color : #eeeeee;
+}
+
+.motivational-quote-container{
+  position : absolute;
+  display : flex;
+  align-items: center;
+  bottom : 2vh;
+  font-size: 0.7em;
+}
+
+.motivational-quote-title{
+  margin-right : 10px;
 }

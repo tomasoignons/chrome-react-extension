@@ -1,0 +1,187 @@
+/* //ici c'est le fichier pour le scss */
+
+.favoris-container{
+    background-color : rgba(33, 117, 173, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    position : absolute;
+    left : 1vw;
+    top : -45vh;
+    width : 27vw;
+    height: 90vh;
+    padding : 13px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header-container{
+    height: 25%;
+    position : relative;
+    padding :5px;
+    box-sizing: border-box;
+    display :flex;
+    align-items: center;
+}
+
+.top-header-container{
+    padding-left :15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    height: 50%;
+    width : 100%;
+    position : absolute;
+    top : 0px;
+    left : 0;
+}
+
+.title-exit-fav-container{
+    display : flex;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    color : #0f3955;
+}
+
+.directory-header-container{
+    margin-top : 10px;
+}
+
+.exit-header-fav-container{
+    height: 100%;
+}
+
+.exit-header-fav-container svg{
+    height: 100%;
+}
+
+.navigation-header-container{
+    height: 50%;
+    width: 100%;
+    position : absolute;
+    bottom : 0px;
+    padding :5px;
+    box-sizing: border-box;
+    display :flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+
+.naviguer-gauche-container{
+    height: 100%;
+    width :100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size : 0.6em;
+    text-align: center;
+}
+.naviguer-droite-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6em;
+    text-align: center;
+}
+.current-folder {
+    width : 100%;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+
+.favoris-icons-container{
+    height: 75%;
+    position : relative;
+    bottom : 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.favoris-icons-container-scrollable{
+    width : 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: scroll;
+    padding :0;
+}
+
+.widget-favoris{
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin :1%;
+    height: 23%;
+    width : 23%;
+    box-sizing: border-box;    
+    overflow: hidden;
+    padding : 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-widget-favoris img{
+    height: 100%;
+}
+
+.widget-title{
+    width : 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 0.6em;
+}
+
+/* POPUP DIRECTORY */
+
+.popup-directory{
+    background-color: white;
+    position : absolute;
+    top : 6vh;
+    width : 23vw;
+    border-radius: 15px;
+    height: 50vh;
+    opacity: 0.9;
+    z-index : 1;
+    overflow-y: hidden;
+    box-shadow: 2px 2px 2px #0f3955;
+    color : black;
+    padding: 0 10px 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.header-popup-directory{
+    width : 100%;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+}
+
+.scrollable-popup-directory{
+    height: 80%;
+    overflow-y: scroll;
+    padding-left : 10px;
+    box-sizing: border-box;
+}
+
+.brother-folder-popup-element-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
